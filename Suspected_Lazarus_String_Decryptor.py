@@ -15,7 +15,7 @@ def string_decryptor(inputstr):
     Input_array= [None] * len(inputstr_splitted)
     i = 0
     while i < len(inputstr_splitted):
-        Input_array[i] = str((int(inputstr_splitted[i]) + 256 - int(Keytable_splitted[i % (len(Keytable_splitted) + 1)])) % 256)
+        Input_array[i] = str((int(inputstr_splitted[i]) + 256 - int(Keytable_splitted[i % (len(Keytable_splitted))])) % 256)
         outputstr = outputstr + chr(int(Input_array[i]))
         i += 1
     return outputstr
